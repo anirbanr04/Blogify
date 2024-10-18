@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>
+        <%=locals.text %>
+    </h1>
+    <h1>
+        <%=locals.message %>
+    </h1>
+    <%- include('../partials/nav.ejs') %>
+
+        <div class="item">
+            <a href="/signup">signup</a>
+            
+
+            <% if (locals.em) { %>
+                <a href="/logout">logout</a>
+                <% } else { %>
+                    <a href="/login">login</a>
+                    <% } %>
+                </div>
+            </nav>
+            <h1> stream that image below! </h1>
+            <img src="/uploads/1724711074213-banner.png">
+            <img src="/uploads/1724756311911-flamingos-8233303_640.jpg" >
+            <img src="/uploads/<%=locals.image%>">
+
+        <script>
+            let h1 = document.querySelector("h1");
+            setTimeout(() => {
+                h1.innerHTML = "";
+            }, 3000);
+
+        </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Blog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    
+    <div class="struct">
+        <div class="itm tit">
+    
+   
+</div>
+<h1><%= locals.user.Title%></h1>
+<div class="itm">
+
+
+   
+     <img src="<%=locals.user.coverimage%>" alt="">
+ </div>
+<div class="itm">
+    <pre><%= locals.user.Body%></pre>
+</div>
+<div class="itm itms">
+<h3>-- Posted By: <%=locals.user.PostedBy%></h3>
+</div>
+</div>
+
+<div class="com">
+    <h3>Leave a Comment:<%= locals.coment.length %></h3>
+    <form action="/user/<%=user._id%>" method="post" >
+    <input type="text" name="body" placeholder="leave commenets">
+    <button type="submit">Submit</button></a> 
+</form>
+</div>
+
+
+</body>
+</html>
+
+
+    
+
+
+
+
+ 
+    
+
+
+
+
+   
+       
+     
+  

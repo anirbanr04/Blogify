@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div>
+  <h1>Comments: <%= locals.coment.length %></h1>
+</div>
+<% locals.coment.forEach(elem => { %>
+    <span><h3>Comment:</h3><p><%= elem.Body %></p>
+    <h3> PostedBy:</h3>
+  <p> <%= elem. PostedBy%></p>
+</span>
+    <% }) %>
+
+
+
+</body>
+</html>
+    
+   
+  
+
+       
+       
